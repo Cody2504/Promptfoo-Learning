@@ -1,0 +1,20 @@
+prompts: file://prompts1.txt
+providers:
+  - openai:gpt-4.1-mini
+  - openai:gpt-4
+tests:
+  - vars:
+      user_profile:
+        name: John Doe
+        interests:
+          - reading
+          - gaming
+          - hiking
+      recent_activity:
+        type: reading
+        details:
+          title: 'The Great Gatsby'
+          author: 'F. Scott Fitzgerald'
+
+  - options:
+      transform: output.toLowerCase()

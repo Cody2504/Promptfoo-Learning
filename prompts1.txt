@@ -1,0 +1,6 @@
+User Profile:
+- Name: {{ user_profile.name }}
+- Interests: {{ user_profile.interests | join(', ') }}
+- Recent Activity: {{ recent_activity.type }} on "{{ recent_activity.details.title }}" by {{ recent_activity.details.author }}
+
+Based on the above user profile, generate a personalized reading recommendation list that includes books similar to "{{ recent_activity.details.title }}" and aligns with the user's interests.
