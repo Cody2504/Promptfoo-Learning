@@ -1,0 +1,1724 @@
+{
+  "evalId": "eval-1sT-2025-06-19T04:22:17",
+  "results": {
+    "version": 3,
+    "timestamp": "2025-06-19T04:22:17.678Z",
+    "prompts": [
+      {
+        "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+        "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+        "id": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "provider": "openai:gpt-4.1",
+        "metrics": {
+          "score": 8,
+          "testPassCount": 8,
+          "testFailCount": 1,
+          "testErrorCount": 0,
+          "assertPassCount": 8,
+          "assertFailCount": 1,
+          "totalLatencyMs": 701,
+          "tokenUsage": {
+            "total": 890,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 890,
+            "numRequests": 9,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0.003934
+        }
+      },
+      {
+        "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+        "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+        "id": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "provider": "openai:gpt-4o",
+        "metrics": {
+          "score": 9,
+          "testPassCount": 9,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 9,
+          "assertFailCount": 0,
+          "totalLatencyMs": 658,
+          "tokenUsage": {
+            "total": 1221,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 1221,
+            "numRequests": 9,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0.0082275
+        }
+      }
+    ],
+    "results": [
+      {
+        "cost": 0.00018399999999999997,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains-any",
+                "value": [
+                  "hello",
+                  "Hello",
+                  "hi",
+                  "Hi"
+                ]
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "2d344062-ba2b-4af4-856d-d8e54f6685b1",
+        "latencyMs": 24,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: greeting\nContext: casual conversation\nInput: Hello\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openai:gpt-4.1",
+          "label": ""
+        },
+        "response": {
+          "output": "Hi there! How can I help you today?",
+          "tokenUsage": {
+            "cached": 62,
+            "total": 62
+          },
+          "cached": true,
+          "cost": 0.00018399999999999997
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "description": "Test basic greeting response",
+            "task": "greeting",
+            "context": "casual conversation",
+            "input": "Hello"
+          },
+          "assert": [
+            {
+              "type": "contains-any",
+              "value": [
+                "hello",
+                "Hello",
+                "hi",
+                "Hi"
+              ]
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          },
+          "description": "Row #1",
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "description": "Test basic greeting response",
+          "task": "greeting",
+          "context": "casual conversation",
+          "input": "Hello"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.00021,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains-any",
+                "value": [
+                  "hello",
+                  "Hello",
+                  "hi",
+                  "Hi"
+                ]
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "7d2effee-9fa9-412c-b8a6-68755bead2f3",
+        "latencyMs": 52,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: greeting\nContext: casual conversation\nInput: Hello\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openai:gpt-4o",
+          "label": ""
+        },
+        "response": {
+          "output": "Hello! How are you doing today?",
+          "tokenUsage": {
+            "cached": 60,
+            "total": 60
+          },
+          "cached": true,
+          "cost": 0.00021
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "description": "Test basic greeting response",
+            "task": "greeting",
+            "context": "casual conversation",
+            "input": "Hello"
+          },
+          "assert": [
+            {
+              "type": "contains-any",
+              "value": [
+                "hello",
+                "Hello",
+                "hi",
+                "Hi"
+              ]
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          },
+          "description": "Row #1",
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "description": "Test basic greeting response",
+          "task": "greeting",
+          "context": "casual conversation",
+          "input": "Hello"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.000172,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "Paris"
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "23abe15a-e94f-45a0-9fa4-52a697d216c6",
+        "latencyMs": 72,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: info_request\nContext: general knowledge\nInput: What is the capital of France?\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openai:gpt-4.1",
+          "label": ""
+        },
+        "response": {
+          "output": "The capital of France is Paris.",
+          "tokenUsage": {
+            "cached": 65,
+            "total": 65
+          },
+          "cached": true,
+          "cost": 0.000172
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "description": "Test information request",
+            "task": "info_request",
+            "context": "general knowledge",
+            "input": "What is the capital of France?"
+          },
+          "assert": [
+            {
+              "type": "contains",
+              "value": "Paris"
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          },
+          "description": "Row #2",
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "description": "Test information request",
+          "task": "info_request",
+          "context": "general knowledge",
+          "input": "What is the capital of France?"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.00021500000000000002,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "Paris"
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "d8870dff-cb9b-4284-9a27-349c1bb86d27",
+        "latencyMs": 92,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: info_request\nContext: general knowledge\nInput: What is the capital of France?\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openai:gpt-4o",
+          "label": ""
+        },
+        "response": {
+          "output": "The capital of France is Paris.",
+          "tokenUsage": {
+            "cached": 65,
+            "total": 65
+          },
+          "cached": true,
+          "cost": 0.00021500000000000002
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "description": "Test information request",
+            "task": "info_request",
+            "context": "general knowledge",
+            "input": "What is the capital of France?"
+          },
+          "assert": [
+            {
+              "type": "contains",
+              "value": "Paris"
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          },
+          "description": "Row #2",
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "description": "Test information request",
+          "task": "info_request",
+          "context": "general knowledge",
+          "input": "What is the capital of France?"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.000178,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "4"
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "4464c613-7370-45fb-81e1-f6c853d38339",
+        "latencyMs": 83,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: calculation\nContext: simple arithmetic\nInput: What is 2+2?\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openai:gpt-4.1",
+          "label": ""
+        },
+        "response": {
+          "output": "2 + 2 equals 4.",
+          "tokenUsage": {
+            "cached": 65,
+            "total": 65
+          },
+          "cached": true,
+          "cost": 0.000178
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "description": "Test math calculation",
+            "task": "calculation",
+            "context": "simple arithmetic",
+            "input": "What is 2+2?"
+          },
+          "assert": [
+            {
+              "type": "contains",
+              "value": "4"
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          },
+          "description": "Row #3",
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "description": "Test math calculation",
+          "task": "calculation",
+          "context": "simple arithmetic",
+          "input": "What is 2+2?"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.0003325,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains-any",
+                "value": [
+                  "welcome",
+                  "pleasure",
+                  "glad",
+                  "you're"
+                ]
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "d91e7427-b7a5-46fd-bcd1-6da6db68a9ef",
+        "latencyMs": 40,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: politeness\nContext: customer service\nInput: Thank you for your help\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openai:gpt-4o",
+          "label": ""
+        },
+        "response": {
+          "output": "You're welcome! If you have any more questions or need further assistance, feel free to ask.",
+          "tokenUsage": {
+            "cached": 76,
+            "total": 76
+          },
+          "cached": true,
+          "cost": 0.0003325
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "description": "Test polite response",
+            "task": "politeness",
+            "context": "customer service",
+            "input": "Thank you for your help"
+          },
+          "assert": [
+            {
+              "type": "contains-any",
+              "value": [
+                "welcome",
+                "pleasure",
+                "glad",
+                "you're"
+              ]
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          },
+          "description": "Row #4",
+          "metadata": {}
+        },
+        "testIdx": 3,
+        "vars": {
+          "description": "Test polite response",
+          "task": "politeness",
+          "context": "customer service",
+          "input": "Thank you for your help"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.00026250000000000004,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "4"
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "51e70eee-db88-47bf-8dde-9073060e12c7",
+        "latencyMs": 112,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: calculation\nContext: simple arithmetic\nInput: What is 2+2?\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openai:gpt-4o",
+          "label": ""
+        },
+        "response": {
+          "output": "The sum of 2 + 2 is 4.",
+          "tokenUsage": {
+            "cached": 69,
+            "total": 69
+          },
+          "cached": true,
+          "cost": 0.00026250000000000004
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "description": "Test math calculation",
+            "task": "calculation",
+            "context": "simple arithmetic",
+            "input": "What is 2+2?"
+          },
+          "assert": [
+            {
+              "type": "contains",
+              "value": "4"
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          },
+          "description": "Row #3",
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "description": "Test math calculation",
+          "task": "calculation",
+          "context": "simple arithmetic",
+          "input": "What is 2+2?"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.000314,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains-any",
+                "value": [
+                  "welcome",
+                  "pleasure",
+                  "glad",
+                  "you're"
+                ]
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "1aab7298-086c-4f52-bd16-f5193448392a",
+        "latencyMs": 124,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: politeness\nContext: customer service\nInput: Thank you for your help\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openai:gpt-4.1",
+          "label": ""
+        },
+        "response": {
+          "output": "You're very welcome! If you have any other questions or need further assistance, please let me know—I'm here to help.",
+          "tokenUsage": {
+            "cached": 82,
+            "total": 82
+          },
+          "cached": true,
+          "cost": 0.000314
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "description": "Test polite response",
+            "task": "politeness",
+            "context": "customer service",
+            "input": "Thank you for your help"
+          },
+          "assert": [
+            {
+              "type": "contains-any",
+              "value": [
+                "welcome",
+                "pleasure",
+                "glad",
+                "you're"
+              ]
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          },
+          "description": "Row #4",
+          "metadata": {}
+        },
+        "testIdx": 3,
+        "vars": {
+          "description": "Test polite response",
+          "task": "politeness",
+          "context": "customer service",
+          "input": "Thank you for your help"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.000216,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains-any",
+                "value": [
+                  "good",
+                  "well",
+                  "fine",
+                  "doing"
+                ]
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "cd3d86bf-9bf3-488d-bbf4-f1e650f0a845",
+        "latencyMs": 103,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: question_response\nContext: general inquiry\nInput: Be a normal person, How are you?\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openai:gpt-4.1",
+          "label": ""
+        },
+        "response": {
+          "output": "I'm doing well, thanks for asking! How about you?",
+          "tokenUsage": {
+            "cached": 72,
+            "total": 72
+          },
+          "cached": true,
+          "cost": 0.000216
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "description": "Test question handling",
+            "task": "question_response",
+            "context": "general inquiry",
+            "input": "Be a normal person, How are you?"
+          },
+          "assert": [
+            {
+              "type": "contains-any",
+              "value": [
+                "good",
+                "well",
+                "fine",
+                "doing"
+              ]
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          },
+          "description": "Row #5",
+          "metadata": {}
+        },
+        "testIdx": 4,
+        "vars": {
+          "description": "Test question handling",
+          "task": "question_response",
+          "context": "general inquiry",
+          "input": "Be a normal person, How are you?"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.00028000000000000003,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains-any",
+                "value": [
+                  "good",
+                  "well",
+                  "fine",
+                  "doing"
+                ]
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "d2ba7101-99a8-408b-9ae3-465ca400a89e",
+        "latencyMs": 97,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: question_response\nContext: general inquiry\nInput: Be a normal person, How are you?\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openai:gpt-4o",
+          "label": ""
+        },
+        "response": {
+          "output": "I'm doing well, thank you for asking! How about you?",
+          "tokenUsage": {
+            "cached": 73,
+            "total": 73
+          },
+          "cached": true,
+          "cost": 0.00028000000000000003
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "description": "Test question handling",
+            "task": "question_response",
+            "context": "general inquiry",
+            "input": "Be a normal person, How are you?"
+          },
+          "assert": [
+            {
+              "type": "contains-any",
+              "value": [
+                "good",
+                "well",
+                "fine",
+                "doing"
+              ]
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          },
+          "description": "Row #5",
+          "metadata": {}
+        },
+        "testIdx": 4,
+        "vars": {
+          "description": "Test question handling",
+          "task": "question_response",
+          "context": "general inquiry",
+          "input": "Be a normal person, How are you?"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.00031999999999999997,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains-any",
+                "value": [
+                  "please provide",
+                  "need more information",
+                  "missing input",
+                  "help you"
+                ]
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "1b871e06-cb14-4de5-b295-d077a752da08",
+        "latencyMs": 97,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: handle_empty\nContext: error handling\nInput: \n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openai:gpt-4.1",
+          "label": ""
+        },
+        "response": {
+          "output": "It appears that your input is empty or missing information. Could you please provide more details or clarify your request? I'm here to help!",
+          "tokenUsage": {
+            "cached": 79,
+            "total": 79
+          },
+          "cached": true,
+          "cost": 0.00031999999999999997
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "description": "Test empty input handling",
+          "vars": {
+            "task": "handle_empty",
+            "context": "error handling",
+            "input": ""
+          },
+          "metadata": {
+            "feature": "input_validation",
+            "priority": "high"
+          },
+          "assert": [
+            {
+              "type": "contains-any",
+              "value": [
+                "please provide",
+                "need more information",
+                "missing input",
+                "help you"
+              ]
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          }
+        },
+        "testIdx": 5,
+        "vars": {
+          "task": "handle_empty",
+          "context": "error handling",
+          "input": ""
+        },
+        "metadata": {
+          "feature": "input_validation",
+          "priority": "high",
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.00043000000000000004,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains-any",
+                "value": [
+                  "please provide",
+                  "need more information",
+                  "missing input",
+                  "help you"
+                ]
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "cfaf2ec0-8fce-4765-b835-151775e4850f",
+        "latencyMs": 79,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: handle_empty\nContext: error handling\nInput: \n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openai:gpt-4o",
+          "label": ""
+        },
+        "response": {
+          "output": "It seems like your input is empty. Could you provide more details or specify what assistance you need? That way, I can help you more effectively.",
+          "tokenUsage": {
+            "cached": 82,
+            "total": 82
+          },
+          "cached": true,
+          "cost": 0.00043000000000000004
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "description": "Test empty input handling",
+          "vars": {
+            "task": "handle_empty",
+            "context": "error handling",
+            "input": ""
+          },
+          "metadata": {
+            "feature": "input_validation",
+            "priority": "high"
+          },
+          "assert": [
+            {
+              "type": "contains-any",
+              "value": [
+                "please provide",
+                "need more information",
+                "missing input",
+                "help you"
+              ]
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          }
+        },
+        "testIdx": 5,
+        "vars": {
+          "task": "handle_empty",
+          "context": "error handling",
+          "input": ""
+        },
+        "metadata": {
+          "feature": "input_validation",
+          "priority": "high",
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.001326,
+        "error": "Expected output to contain \"Hello\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Expected output to contain \"Hello\"",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Expected output to contain \"Hello\"",
+              "assertion": {
+                "type": "contains",
+                "value": "Hello"
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "ec16d536-a515-4d4b-bb0e-f86879c747fb",
+        "latencyMs": 73,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: handle_special_chars\nContext: encoding test\nInput: Hello! @#$%^&*()_+ 你好 🚀\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openai:gpt-4.1",
+          "label": ""
+        },
+        "response": {
+          "output": "Your input contains special characters, symbols, non-Latin characters (Chinese: 你好), and an emoji (🚀). All these characters are valid and can be encoded using Unicode (UTF-8), which accommodates a wide variety of symbols and scripts from different languages, as well as emojis and special characters.\n\nIf your goal is to ensure these characters display or transmit correctly:\n\n- Use UTF-8 encoding to support all included characters and symbols.\n- Most modern systems, programming languages, and web standards (like HTML5) use UTF-8 by default.\n\nIf you need to escape or encode these characters for a specific context (such as URLs, HTML, or JSON), let me know your target format, and I can provide appropriate examples!",
+          "tokenUsage": {
+            "cached": 216,
+            "total": 216
+          },
+          "cached": true,
+          "cost": 0.001326
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "description": "Test special characters handling",
+          "vars": {
+            "task": "handle_special_chars",
+            "context": "encoding test",
+            "input": "Hello! @#$%^&*()_+ 你好 🚀"
+          },
+          "metadata": {
+            "feature": "encoding",
+            "priority": "high"
+          },
+          "assert": [
+            {
+              "type": "contains",
+              "value": "Hello"
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          }
+        },
+        "testIdx": 6,
+        "vars": {
+          "task": "handle_special_chars",
+          "context": "encoding test",
+          "input": "Hello! @#$%^&*()_+ 你好 🚀"
+        },
+        "metadata": {
+          "feature": "encoding",
+          "priority": "high",
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0.0026775,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "Hello"
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "0333eebf-2d71-4fa9-9386-ca3c75b4b702",
+        "latencyMs": 67,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: handle_special_chars\nContext: encoding test\nInput: Hello! @#$%^&*()_+ 你好 🚀\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openai:gpt-4o",
+          "label": ""
+        },
+        "response": {
+          "output": "Hello! It looks like you've provided a string with a mix of special characters, symbols, and emojis: \n\n\"Hello! @#$%^&*()_+ 你好 🚀\"\n\nIf you need help with handling or processing these types of characters—perhaps in coding, text processing, or ensuring compatibility across systems—here are a few general tips:\n\n1. **Encoding:** Ensure your system or application supports UTF-8 encoding, which can handle a wide range of characters, including special symbols, emojis, and multilingual text.\n\n2. **Escape Characters:** In programming, some special characters may need to be \"escaped\" with a backslash (\\) to be used in strings (e.g., in JavaScript or Python).\n\n3. **Regular Expressions:** You can use regular expressions (regex) to identify or filter specific characters. For instance, `[\\W_]+` can match non-alphanumeric characters.\n\n4. **Libraries/Tools:** Consider using libraries or tools designed for text processing, like Python's `str` methods or JavaScript's string handling capabilities, which often have built-in functions to manage and manipulate such inputs.\n\nIf you have a specific use case or problem regarding these characters, feel free to provide more details for tailored assistance!",
+          "tokenUsage": {
+            "cached": 318,
+            "total": 318
+          },
+          "cached": true,
+          "cost": 0.0026775
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "description": "Test special characters handling",
+          "vars": {
+            "task": "handle_special_chars",
+            "context": "encoding test",
+            "input": "Hello! @#$%^&*()_+ 你好 🚀"
+          },
+          "metadata": {
+            "feature": "encoding",
+            "priority": "high"
+          },
+          "assert": [
+            {
+              "type": "contains",
+              "value": "Hello"
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          }
+        },
+        "testIdx": 6,
+        "vars": {
+          "task": "handle_special_chars",
+          "context": "encoding test",
+          "input": "Hello! @#$%^&*()_+ 你好 🚀"
+        },
+        "metadata": {
+          "feature": "encoding",
+          "priority": "high",
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.00024399999999999997,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "Bonjour"
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "7bcd4759-9b5c-423e-aea7-52ad47f238a7",
+        "latencyMs": 67,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: Translate text to another language\nContext: Translation request with formal tone specified\nInput: Please translate 'Hello' to French using a formal tone\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openai:gpt-4.1",
+          "label": ""
+        },
+        "response": {
+          "output": "The formal translation of \"Hello\" in French is \"Bonjour.\"",
+          "tokenUsage": {
+            "cached": 83,
+            "total": 83
+          },
+          "cached": true,
+          "cost": 0.00024399999999999997
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "description": "Test French translation with formal tone",
+          "vars": {
+            "task": "Translate text to another language",
+            "context": "Translation request with formal tone specified",
+            "input": "Please translate 'Hello' to French using a formal tone"
+          },
+          "metadata": {
+            "feature": "translation",
+            "priority": "high",
+            "category": "language_support"
+          },
+          "assert": [
+            {
+              "type": "contains",
+              "value": "Bonjour"
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          }
+        },
+        "testIdx": 7,
+        "vars": {
+          "task": "Translate text to another language",
+          "context": "Translation request with formal tone specified",
+          "input": "Please translate 'Hello' to French using a formal tone"
+        },
+        "metadata": {
+          "feature": "translation",
+          "priority": "high",
+          "category": "language_support",
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.00031500000000000007,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "Bonjour"
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "a4005160-4fed-420e-8b5d-d6389f8999cb",
+        "latencyMs": 63,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: Translate text to another language\nContext: Translation request with formal tone specified\nInput: Please translate 'Hello' to French using a formal tone\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openai:gpt-4o",
+          "label": ""
+        },
+        "response": {
+          "output": "In French, the formal translation of 'Hello' is 'Bonjour'.",
+          "tokenUsage": {
+            "cached": 84,
+            "total": 84
+          },
+          "cached": true,
+          "cost": 0.00031500000000000007
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "description": "Test French translation with formal tone",
+          "vars": {
+            "task": "Translate text to another language",
+            "context": "Translation request with formal tone specified",
+            "input": "Please translate 'Hello' to French using a formal tone"
+          },
+          "metadata": {
+            "feature": "translation",
+            "priority": "high",
+            "category": "language_support"
+          },
+          "assert": [
+            {
+              "type": "contains",
+              "value": "Bonjour"
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          }
+        },
+        "testIdx": 7,
+        "vars": {
+          "task": "Translate text to another language",
+          "context": "Translation request with formal tone specified",
+          "input": "Please translate 'Hello' to French using a formal tone"
+        },
+        "metadata": {
+          "feature": "translation",
+          "priority": "high",
+          "category": "language_support",
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.00098,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "password"
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "1fe1df66-978d-45a8-868f-ad40c35b7eca",
+        "latencyMs": 58,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: Provide guidance on password reset\nContext: User authentication support\nInput: Reset password\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openai:gpt-4.1",
+          "label": ""
+        },
+        "response": {
+          "output": "To reset your password, please follow these steps:\n\n1. Go to the login page.\n2. Click on the “Forgot password?” or “Reset password” link.\n3. Enter your registered email address and follow the instructions sent to your email.\n4. Check your inbox for a password reset email and click the link provided.\n5. Follow the prompts to create a new password.\n\nIf you don’t receive the email within a few minutes, check your spam or junk folder. If you need further assistance, please contact our support team.",
+          "tokenUsage": {
+            "cached": 166,
+            "total": 166
+          },
+          "cached": true,
+          "cost": 0.00098
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "description": "Test password reset functionality",
+          "vars": {
+            "task": "Provide guidance on password reset",
+            "context": "User authentication support",
+            "input": "Reset password"
+          },
+          "metadata": {
+            "feature": "authentication",
+            "priority": "high",
+            "security_test": true
+          },
+          "assert": [
+            {
+              "type": "contains",
+              "value": "password"
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          }
+        },
+        "testIdx": 8,
+        "vars": {
+          "task": "Provide guidance on password reset",
+          "context": "User authentication support",
+          "input": "Reset password"
+        },
+        "metadata": {
+          "feature": "authentication",
+          "priority": "high",
+          "security_test": true,
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.0035050000000000003,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "password"
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "5641b1d9-7eaa-4e08-b82a-f748751c2000",
+        "latencyMs": 56,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: Provide guidance on password reset\nContext: User authentication support\nInput: Reset password\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.",
+          "label": "prompts\\main_prompt.txt: You are a helpful AI assistant that provides accurate and informative responses.\n\nTask: {{task}}\nContext: {{context}}\nInput: {{input}}\n\nPlease provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness."
+        },
+        "promptId": "c15701cb1071adf0977543a8761b3b3266b34256ae2b6e6f0326ab6137d09219",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openai:gpt-4o",
+          "label": ""
+        },
+        "response": {
+          "output": "Certainly! Here’s a step-by-step guide to help you reset your password:\n\n1. **Visit the Login Page**: Go to the website or application where you're trying to reset your password.\n\n2. **Locate the 'Forgot Password?' Link**: On the login page, look for a link or button that usually says \"Forgot Password?\" or \"Reset Password.\" Click on it.\n\n3. **Enter Your Email or Username**: You’ll typically be prompted to enter the email address or username associated with your account. Enter the required information and submit the form.\n\n4. **Check Your Email**: Look for an email from the service provider with a password reset link. Be sure to check your spam or junk folder if you do not see the email in your inbox.\n\n5. **Follow the Reset Link**: Click on the link provided in the email. This will usually take you to a secure page where you can create a new password.\n\n6. **Create a New Password**: Enter a new password. Make sure it is strong by using a mix of letters, numbers, and special characters. Confirm the new password if required.\n\n7. **Confirm the Change**: Some sites might ask you to confirm the password reset by clicking a button like \"Submit\" or \"Save\". Do so to complete the process.\n\n8. **Login with Your New Password**: Return to the login page and enter your username and your new password to access your account.\n\nIf you encounter any issues, consider reaching out to the website’s customer support for additional assistance. Make sure to also keep your new password secure and consider using a password manager to help you manage it safely.",
+          "tokenUsage": {
+            "cached": 394,
+            "total": 394
+          },
+          "cached": true,
+          "cost": 0.0035050000000000003
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "description": "Test password reset functionality",
+          "vars": {
+            "task": "Provide guidance on password reset",
+            "context": "User authentication support",
+            "input": "Reset password"
+          },
+          "metadata": {
+            "feature": "authentication",
+            "priority": "high",
+            "security_test": true
+          },
+          "assert": [
+            {
+              "type": "contains",
+              "value": "password"
+            }
+          ],
+          "options": {
+            "temperature": 0.1,
+            "maxTokens": 1000
+          }
+        },
+        "testIdx": 8,
+        "vars": {
+          "task": "Provide guidance on password reset",
+          "context": "User authentication support",
+          "input": "Reset password"
+        },
+        "metadata": {
+          "feature": "authentication",
+          "priority": "high",
+          "security_test": true,
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      }
+    ],
+    "stats": {
+      "successes": 17,
+      "failures": 1,
+      "errors": 0,
+      "tokenUsage": {
+        "cached": 2111,
+        "completion": 0,
+        "prompt": 0,
+        "total": 2111,
+        "numRequests": 18,
+        "completionDetails": {
+          "reasoning": 0,
+          "acceptedPrediction": 0,
+          "rejectedPrediction": 0
+        },
+        "assertions": {
+          "total": 0,
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0
+        }
+      }
+    }
+  },
+  "config": {
+    "description": "AI Model Testing Configuration",
+    "prompts": [
+      "file://prompts/main_prompt.txt"
+    ],
+    "providers": [
+      {
+        "id": "openai:gpt-4.1"
+      },
+      {
+        "id": "openai:gpt-4o"
+      }
+    ],
+    "tests": [
+      "file://tests/basic_functionality.csv",
+      "file://tests/edge_cases.yaml",
+      "file://tests/regression_tests.json"
+    ],
+    "sharing": true,
+    "defaultTest": {
+      "options": {
+        "temperature": 0.1,
+        "maxTokens": 1000
+      }
+    },
+    "outputPath": "./results/evaluation_results.json",
+    "extensions": []
+  },
+  "shareableUrl": null
+}

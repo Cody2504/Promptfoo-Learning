@@ -1,0 +1,17 @@
+description: "AI Model Testing Configuration"
+prompts:
+  - file://prompts/main_prompt.txt
+providers:
+  - id: openai:gpt-4.1
+  - id: openai:gpt-4o
+tests:
+  - file://tests/basic_functionality.csv
+  - file://tests/edge_cases.yaml
+  - file://tests/regression_tests.json
+vars:
+  file://variables.yaml
+outputPath: ./results/evaluation_results.json
+defaultTest:
+  options:
+    temperature: 0.1
+    maxTokens: 1000

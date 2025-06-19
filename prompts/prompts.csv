@@ -1,0 +1,4 @@
+prompt,label
+"Translate to French: {{text}}","French Translation"
+"Translate to Spanish: {{text}}","Spanish Translation"
+"Translate to German: {{text}}","German Translation"

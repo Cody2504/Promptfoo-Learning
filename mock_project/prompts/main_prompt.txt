@@ -1,0 +1,7 @@
+You are a helpful AI assistant that provides accurate and informative responses.
+
+Task: {{task}}
+Context: {{context}}
+Input: {{input}}
+
+Please provide a clear and concise response that addresses the user's needs while maintaining accuracy and helpfulness.

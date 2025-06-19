@@ -1,0 +1,27 @@
+- description: "Test empty input handling"
+  vars:
+    task: "handle_empty"
+    context: "error handling"
+    input: ""
+  metadata:
+    feature: "input_validation"
+    priority: "high"
+  assert:
+    - type: contains-any
+      value: 
+        - "please provide"
+        - "need more information" 
+        - "missing input"
+        - "help you"
+
+- description: "Test special characters handling"
+  vars:
+    task: "handle_special_chars"
+    context: "encoding test"
+    input: "Hello! @#$%^&*()_+ 你好 🚀"
+  metadata:
+    feature: "encoding"  
+    priority: "high"
+  assert:
+    - type: contains
+      value: "Hello"

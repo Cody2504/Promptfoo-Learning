@@ -1,0 +1,6 @@
+description,task,context,input,__expected
+"Test basic greeting response","greeting","casual conversation","Hello","contains-any:hello, Hello, hi, Hi"
+"Test information request","info_request","general knowledge","What is the capital of France?","contains:Paris"
+"Test math calculation","calculation","simple arithmetic","What is 2+2?","contains:4"
+"Test polite response","politeness","customer service","Thank you for your help","contains-any:welcome,pleasure,glad,you're"
+"Test question handling","question_response","general inquiry","Be a normal person, How are you?","contains-any:good,well,fine,doing"

@@ -1,0 +1,93 @@
+#Text prompts
+prompts:
+  - 'Translate the following text to French: "{{text}}"'
+  - 'Summarize this article: {{article}}'
+
+#Multiline Prompts
+prompts:
+  - |-
+    You are a helpful assistant.
+
+    Please answer the following question:
+    {{question}}
+
+    Provide a detailed explanation.
+
+#Nunjucks Prompts
+prompts:
+  - 'Hello {{name}}, welcome to {{company}}!'
+  - 'Product: {{product | upper}}' # Using filters
+  - '{% if premium %}Priority support: {% endif %}{{issue}}' # Conditionals
+
+#File-based Prompts
+prompts:
+  - file://prompts/customer_service.txt
+  - file://prompts/technical_support.txt
+
+#Using Globs to load multiple files
+prompts:
+  - file://prompts/*.txt
+  - file://scenarios/**/*.json
+
+#Dynamic prompts
+prompts:
+  - file://generate_prompt.py:create_prompt
+
+#Model-specific prompts
+prompts:
+  - id: file://prompts/gpt_prompt.json
+    label: gpt_prompt
+  - id: file://prompts/claude_prompt.txt
+    label: claude_prompt
+
+providers:
+  - id: openai:gpt-4
+    prompts: [gpt_prompt]
+  - id: anthropic:claude-3
+    prompts: [claude_prompt]
+
+#CSV Prompts
+prompts:
+  - file://prompts.csv
+
+#Custom Nunjucks Filters
+nunjucksFilters:
+  uppercaseFirst: ./uppercase_first.js
+
+prompts:
+  - 'Dear {{ name | uppercaseFirst }}, {{ message }}'
+
+#Prompts Labels & Ids
+prompts:
+  - id: file://customer_prompt.txt
+    label: 'Customer Service'
+  - id: file://technical_prompt.txt
+    label: 'Technical Support'
+
+#System + User Message prompt
+prompts:
+[
+  { "role": "system", "content": "You are {{role}}" },
+  { "role": "user", "content": "{{query}}" }
+]
+
+#Few-shot examples prompts
+prompts:
+  - |-
+    Classify the sentiment:
+
+    Text: "I love this!" → Positive
+    Text: "This is terrible" → Negative
+    Text: "{{text}}" →
+
+#Chain of Thought Prompts
+prompts:
+  - |-
+    Question: {{question}}
+
+    Let's think step by step:
+    1. First, identify what we know
+    2. Then, determine what we need to find
+    3. Finally, solve the problem
+
+    Answer:

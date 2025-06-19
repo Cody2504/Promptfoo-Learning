@@ -1,0 +1,24 @@
+[
+  {
+    "vars": {
+      "topic": "artificial intelligence"
+    },
+    "assert": [
+      {
+        "type": "contains",
+        "value": "AI"
+      }
+    ]
+  },
+  {
+    "vars": {
+      "topic": "climate change"
+    },
+    "assert": [
+      {
+        "type": "llm-rubric",
+        "value": "Discusses environmental impact"
+      }
+    ]
+  }
+]

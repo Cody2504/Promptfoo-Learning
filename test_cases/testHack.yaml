@@ -1,0 +1,35 @@
+#Inline tests
+tests:
+  - vars:
+      question: 'What is the capital of France?'
+    assert:
+      - type: contains
+        value: 'Paris'
+
+  - vars:
+      question: 'What is 2 + 2?'
+    assert:
+      - type: equals
+        value: '4'
+  
+#Test Structure
+tests:
+  - description: 'Optional test description'
+    vars:
+      # Variables to substitute in prompts
+      var1: value1
+      var2: value2
+    assert:
+      # Expected outputs and validations
+      - type: contains
+        value: 'expected text'
+    metadata:
+      # Filterable metadata
+      category: math
+      difficulty: easy
+
+#External Test Files
+tests:
+  - file://basic_tests.yaml
+  - file://advanced_tests.yaml
+  - file://edge_cases/*.yaml

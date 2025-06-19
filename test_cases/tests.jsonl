@@ -1,0 +1,2 @@
+{"vars": {"x": 5, "y": 3}, "assert": [{"type": "equals", "value": "8"}]}
+{"vars": {"x": 10, "y": 7}, "assert": [{"type": "equals", "value": "17"}]}

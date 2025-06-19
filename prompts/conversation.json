@@ -1,0 +1,18 @@
+[
+  {
+    "role": "system",
+    "content": "You are a tutoring assistant."
+  },
+  {
+    "role": "user",
+    "content": "What is recursion?"
+  },
+  {
+    "role": "assistant",
+    "content": "Recursion is a programming technique where a function calls itself."
+  },
+  {
+    "role": "user",
+    "content": "Can you show me an example in {{language}}?"
+  }
+]

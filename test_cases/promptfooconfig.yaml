@@ -1,0 +1,13 @@
+prompts: file://chatprompt.json
+
+providers:
+  - id: openai:gpt-4.1-mini
+  - id: openai:gpt-4o
+
+tests:
+  - vars:
+      image: file://test_image.jpg
+      question: 'What objects are in this image?'
+    assert:
+      - type: contains
+        value: 'dog'

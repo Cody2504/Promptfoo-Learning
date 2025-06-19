@@ -1,0 +1,40 @@
+[
+  {
+    "description": "Test French translation with formal tone",
+    "vars": {
+      "task": "Translate text to another language",
+      "context": "Translation request with formal tone specified",
+      "input": "Please translate 'Hello' to French using a formal tone"
+    },
+    "metadata": {
+      "feature": "translation",
+      "priority": "high",
+      "category": "language_support"
+    },
+    "assert": [
+      {
+        "type": "contains",
+        "value": "Bonjour"
+      }
+    ]
+  },
+  {
+    "description": "Test password reset functionality",
+    "vars": {
+      "task": "Provide guidance on password reset",
+      "context": "User authentication support",
+      "input": "Reset password"
+    },
+    "metadata": {
+      "feature": "authentication",
+      "priority": "high",
+      "security_test": true
+    },
+    "assert": [
+      {
+        "type": "contains",
+        "value": "password"
+      }
+    ]
+  }
+]

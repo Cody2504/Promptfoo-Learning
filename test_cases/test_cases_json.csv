@@ -1,0 +1,2 @@
+query,context,__expected
+"What's the temperature?","{""location"":""NYC"",""units"":""celsius""}","contains: celsius"
