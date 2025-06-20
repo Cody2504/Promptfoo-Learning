@@ -1,0 +1,20 @@
+assertionTemplates:
+  containsMentalHealth:
+    type: javascript
+    value: output.toLowerCase().includes('mental health')
+
+prompts:
+  - file://prompt1.txt
+  - file://prompt2.txt
+providers:
+  - openai:gpt-4.1-mini
+  - localai:chat:vicuna
+tests:
+  - vars:
+      input: Tell me about the benefits of exercise.
+    assert:
+      - $ref: "#/assertionTemplates/containsMentalHealth"
+  - vars:
+      input: How can I improve my well-being?
+    assert:
+      - $ref: "#/assertionTemplates/containsMentalHealth"

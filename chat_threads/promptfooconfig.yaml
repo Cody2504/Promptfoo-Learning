@@ -1,0 +1,43 @@
+# prompts:
+#   - file://history_prompt.json
+
+# providers:
+#   - openai:gpt-4.1-mini
+
+# Set up the conversation history
+# defaultTest:
+#   vars:
+#     system_message: Answer concisely
+#     messages:
+#       - user: Who founded Facebook?
+#       - assistant: Mark Zuckerberg
+#       - user: What's his favorite food?
+#       - assistant: Pizza
+
+# # Test multiple follow-ups
+# tests:
+#   - vars:
+#       question: Did he create any other companies?
+#   - vars:
+#       question: What is his role at Internet.org?
+#   - vars:
+#       question: Will he let me borrow $5?
+
+prompts:
+  - 'Respond to the user: {{message}}'
+
+providers:
+  - openai:gpt-4.1
+
+tests:
+  - vars:
+      message: "What's your favorite fruit? You must pick one. Output the name of a fruit only"
+    options:
+      storeOutputAs: favoriteFruit
+      transform: output.split(' ')[0]
+  - vars:
+      message: 'Why do you like {{favoriteFruit}} so much?'
+    options:
+      storeOutputAs: reason
+  - vars:
+      message: 'Write a snarky 2 sentence rebuttal to this argument for loving {{favoriteFruit}}: \"{{reason}}\"'

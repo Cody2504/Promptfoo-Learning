@@ -1,0 +1,8 @@
+- vars:
+    question: 'Who founded Facebook?'
+  metadata:
+    conversationId: 'conversation1'
+- vars:
+    question: 'Where does he live?'
+  metadata:
+    conversationId: 'conversation1'

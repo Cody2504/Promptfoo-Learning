@@ -1,0 +1,11 @@
+[
+{% for message in messages %}
+  {% set outer_loop = loop %}
+  {% for role, content in message %}
+  {
+    "role": "{{ role }}",
+    "content": "{{ content }}"
+  }{% if not (loop.last and outer_loop.last) %},{% endif %}
+  {% endfor %}
+{% endfor %}
+]

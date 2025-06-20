@@ -1,0 +1,29 @@
+assert:
+  # Track true positives, false positives, etc
+  - type: javascript
+    value: "output.sentiment === 'positive' && context.vars.sentiment === 'positive' ? 1 : 0"
+    metric: true_positives
+    weight: 0
+
+  - type: javascript
+    value: "output.sentiment === 'positive' && context.vars.sentiment === 'negative' ? 1 : 0"
+    metric: false_positives
+    weight: 0
+
+  - type: javascript
+    value: "output.sentiment === 'negative' && context.vars.sentiment === 'positive' ? 1 : 0"
+    metric: false_negatives
+    weight: 0
+
+derivedMetrics:
+  # Precision = TP / (TP + FP)
+  - name: precision
+    value: true_positives / (true_positives + false_positives)
+
+  # Recall = TP / (TP + FN)
+  - name: recall
+    value: true_positives / (true_positives + false_negatives)
+
+  # F1 Score = 2 * (precision * recall) / (precision + recall)
+  - name: f1_score
+    value: 2 * true_positives / (2 * true_positives + false_positives + false_negatives)

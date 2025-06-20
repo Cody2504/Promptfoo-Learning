@@ -1,0 +1,8 @@
+- vars:
+    question: 'Where is Yosemite National Park?'
+  metadata:
+    conversationId: 'conversation2'
+- vars:
+    question: 'What are good hikes there?'
+  metadata:
+    conversationId: 'conversation2'
